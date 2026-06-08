@@ -1,0 +1,72 @@
+{
+  "scan_date": "2026-06-08 18:38:56",
+  "total_findings": 10,
+  "summary": {
+    "CRITICAL": 1,
+    "HIGH": 8,
+    "MEDIUM": 1,
+    "INFO": 0
+  },
+  "findings": [
+    {
+      "check": "IAM User Without MFA",
+      "resource": "security-scanner-readonly",
+      "severity": "HIGH",
+      "recommendation": "Enable MFA for IAM user security-scanner-readonly"
+    },
+    {
+      "check": "No Password Policy Set",
+      "resource": "account-password-policy",
+      "severity": "HIGH",
+      "recommendation": "Create and enforce an IAM password policy"
+    },
+    {
+      "check": "CloudTrail Not Enabled",
+      "resource": "account",
+      "severity": "CRITICAL",
+      "recommendation": "Enable CloudTrail to log all AWS API calls across all regions"
+    },
+    {
+      "check": "No Multi-Region CloudTrail Configured",
+      "resource": "account",
+      "severity": "HIGH",
+      "recommendation": "Configure at least one multi-region CloudTrail to capture all activity"
+    },
+    {
+      "check": "Default VPC Security Group Has Rules",
+      "resource": "sg-00345ccb85148995f",
+      "severity": "HIGH",
+      "recommendation": "Remove all rules from default security group sg-00345ccb85148995f in VPC vpc-0b7908f57eab5feec"
+    },
+    {
+      "check": "VPC Flow Logs Not Enabled",
+      "resource": "vpc-0b7908f57eab5feec",
+      "severity": "MEDIUM",
+      "recommendation": "Enable VPC Flow Logs for VPC vpc-0b7908f57eab5feec to capture network traffic"
+    },
+    {
+      "check": "GuardDuty Not Enabled",
+      "resource": "region:us-east-1",
+      "severity": "HIGH",
+      "recommendation": "Enable GuardDuty in region us-east-1 for threat detection"
+    },
+    {
+      "check": "GuardDuty Not Enabled",
+      "resource": "region:us-east-2",
+      "severity": "HIGH",
+      "recommendation": "Enable GuardDuty in region us-east-2 for threat detection"
+    },
+    {
+      "check": "GuardDuty Not Enabled",
+      "resource": "region:us-west-1",
+      "severity": "HIGH",
+      "recommendation": "Enable GuardDuty in region us-west-1 for threat detection"
+    },
+    {
+      "check": "GuardDuty Not Enabled",
+      "resource": "region:us-west-2",
+      "severity": "HIGH",
+      "recommendation": "Enable GuardDuty in region us-west-2 for threat detection"
+    }
+  ]
+}
